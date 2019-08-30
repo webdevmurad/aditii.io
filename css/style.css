@@ -99,7 +99,7 @@
   color: #ffffff;
   font-family: "Bebas Neue";
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 19px;
   text-decoration: none;
 }
@@ -120,7 +120,7 @@
 }
 
 .nav-link:hover {
-  color: #a1a1a1;
+  color: #D5EA77;
 }
 
 .presentation {
@@ -205,6 +205,10 @@
   opacity: 0.31;
 }
 
+.clothes-slide__img:hover {
+  cursor: pointer;
+}
+
 .clothes-slide__blocks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,15 +219,36 @@
 }
 
 .clothes-slide__block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
   margin-top: 25px;
+  margin-bottom: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.clothes-slide__block:after {
+  content: '';
+  position: absolute;
+  display: block;
+  opacity: 0.3;
+  color: #F8F8F8;
+  bottom: -32px;
+  height: 217px;
+  left: calc(100% + 0px);
+  border-right: 3px solid rgba(0, 0, 0, 0.16);
+}
+
+.clothes-slide__block:last-child:after {
+  border-right: none;
 }
 
 .clothes-slide__info {
@@ -236,7 +261,7 @@
   color: #afafaf;
   font-family: "Bebas Neue";
   font-size: 27px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 25px;
 }
 
@@ -250,7 +275,192 @@
   color: #ffffff;
   font-family: "Bebas Neue";
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 19px;
+}
+
+.clothes-slide__btn:hover {
+  cursor: pointer;
+}
+
+.clothes-slide__price {
+  margin-top: 10px;
+}
+
+.clothes-dollar {
+  font-weight: 900;
+  margin-left: 0px;
+}
+
+.clothes-price {
+  font-weight: 900;
+}
+
+.product-item {
+  background-color: #3cc395;
+}
+
+.product-feature {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #ffffff;
+  font-family: "Bebas Neue";
+  font-size: 31px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.product-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px;
+  margin-bottom: 73px;
+}
+
+.product-block {
+  height: 270px;
+  margin-bottom: 26px;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  margin-right: 55px;
+  text-align: center;
+  border-bottom: 5px solid #3cc395;
+}
+
+.product-block__img {
+  padding-top: 20px;
+}
+
+.product-block__img:hover {
+  cursor: pointer;
+}
+
+.product-block__title {
+  margin-top: 15px;
+  color: #afafaf;
+  font-family: "Bebas Neue";
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.product-block__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.product-block__btn {
+  padding: 10px;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  background-color: #3cc395;
+  font-family: "Bebas Neue";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20.19px;
+}
+
+.product-block__btn:hover {
+  cursor: pointer;
+}
+
+.product-dollar {
+  margin-left: 0px;
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.product-price {
+  font-size: 27px;
+  margin-right: 15px;
+  font-weight: 900;
+}
+
+.menu {
+  background-color: #3cc3b5;
+}
+
+.menu-clothes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.menu-title {
+  color: #ffffff;
+  font-family: "Bebas Neue";
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 25px;
+}
+
+.menu-title:hover {
+  cursor: pointer;
+}
+
+.menu-brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 27px;
+}
+
+.menu-brand {
+  color: #ffffff;
+  margin-bottom: 4px;
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.menu-brand:hover {
+  color: #D5EA77;
+}
+
+footer {
+  background-color: #2da89b;
+}
+
+.footer-block {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
 }
 /*# sourceMappingURL=style.css.map */

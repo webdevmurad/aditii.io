@@ -1,13 +1,31 @@
 .clothes
     &-slide
+        &__img
+            &:hover
+                cursor: pointer
         &__blocks
             display: flex
             justify-content: space-between
         &__block
+            position: relative
             display: flex
             flex-basis: 33%
             margin-top: 25px
+            margin-bottom: 32px
+            justify-content: center
             align-items: center
+            &:after
+                content: ''
+                position: absolute
+                display: block
+                opacity: 0.3
+                color: #F8F8F8
+                bottom: -32px
+                height: 217px
+                left: calc(100% + 0px)
+                border-right: 3px solid rgba(0, 0, 0, 0.16)
+            &:last-child:after
+                border-right: none
         &__info
             margin-top: 53px
             margin-left: 52px
@@ -16,7 +34,7 @@
             color: #afafaf
             font-family: "Bebas Neue"
             font-size: 27px
-            font-weight: 400
+            font-weight: 700
             line-height: 25px
         &__btn
             margin-top: 20px
@@ -28,5 +46,15 @@
             color: #ffffff
             font-family: "Bebas Neue"
             font-size: 19px
-            font-weight: 400
+            font-weight: 900
             line-height: 19px
+            &:hover
+                cursor: pointer
+        &__price
+            margin-top: 10px
+.clothes
+    &-dollar
+        font-weight: 900
+        margin-left: 0px
+    &-price
+        font-weight: 900
