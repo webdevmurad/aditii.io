@@ -58,3 +58,29 @@
         margin-left: 0px
     &-price
         font-weight: 900
+
+@media (max-width: 990px)
+    .clothes
+        &-slide
+            &__info
+                margin-left: 10px
+@media (max-width: 768px)
+    .clothes
+        &-slide
+            &__blocks
+                flex-direction: column
+            &__block
+                margin-top: 0px
+                margin-bottom: 15px
+                &:after
+                    border-right: none
+            &__info
+                margin-top: 25px
+@media (max-width: 425px)
+    .clothes
+        &-slide
+            &__info
+                text-align: center
+            &__text
+                padding-right: 0px
+                
