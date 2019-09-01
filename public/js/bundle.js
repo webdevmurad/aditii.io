@@ -86,6 +86,57 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./js/parts/basket.js":
+/*!****************************!*\
+  !*** ./js/parts/basket.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function basket() {
+  var cards = document.querySelectorAll('.product-blocks .card'),
+      cartWrapper = document.querySelector('.cart-wrapper'),
+      cartEmpty = document.querySelector('.cart-empty'),
+      countGoods = document.querySelector('.basket-counter');
+  cards.forEach(function (card) {
+    var btn = card.querySelector('.product-block__btn');
+    btn.addEventListener('click', function () {
+      var cardClone = card.cloneNode(true);
+      cartWrapper.appendChild(cardClone);
+      showData();
+      var removeBtn = cardClone.querySelector('.product-block__btn');
+      removeBtn.textContent = 'Delete';
+      removeBtn.addEventListener('click', function () {
+        cardClone.remove();
+        showData();
+      });
+    });
+  });
+
+  function showData() {
+    var cardsCart = cartWrapper.querySelectorAll('.card'),
+        cardsPrice = cartWrapper.querySelectorAll('.product-price'),
+        cardTotal = document.querySelector('.basket-price');
+    var sum = 0;
+    countGoods.textContent = cardsCart.length;
+    cardsPrice.forEach(function (cardPrice) {
+      var price = parseFloat(cardPrice.textContent);
+      sum += price;
+    });
+    cardTotal.textContent = sum;
+
+    if (cardsCart.length !== 0) {
+      cartEmpty.remove();
+    } else {
+      cartWrapper.appendChild(cartEmpty);
+    }
+  }
+}
+
+module.exports = basket;
+
+/***/ }),
+
 /***/ "./js/parts/burger.js":
 /*!****************************!*\
   !*** ./js/parts/burger.js ***!
@@ -132,7 +183,7 @@ function openModal() {
   });
   cartClose.addEventListener('click', function () {
     cartBody.style.display = 'none';
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = '';
   });
 }
 
@@ -151,8 +202,10 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   var burger = __webpack_require__(/*! ./parts/burger.js */ "./js/parts/burger.js"),
-      openModal = __webpack_require__(/*! ./parts/openModal.js */ "./js/parts/openModal.js");
+      openModal = __webpack_require__(/*! ./parts/openModal.js */ "./js/parts/openModal.js"),
+      basket = __webpack_require__(/*! ./parts/basket.js */ "./js/parts/basket.js");
 
+  basket();
   openModal();
   burger();
 });

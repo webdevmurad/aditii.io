@@ -2,8 +2,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
     'use strict';
     let burger = require('./parts/burger.js'),
-        openModal = require('./parts/openModal.js');
+        openModal = require('./parts/openModal.js'),
+        basket = require('./parts/basket.js');
 
+    basket();
     openModal();
     burger();
 });
