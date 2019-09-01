@@ -1,13 +1,18 @@
-const burgerMenu = document.getElementById('burger'),
-    cart = document.querySelector('.burger'),
-    closeBtn = document.querySelector('.burger-close');
+window.addEventListener('DOMContentLoaded', function() {
 
-    burgerMenu.addEventListener('click', () => {
-        cart.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    });
+    'use strict';
+    let burger = require('./parts/burger.js');
 
-    closeBtn.addEventListener('click', () => {
-        cart.style.display = 'none';
-        document.body.style.overflow = '';
-    });
+
+    burger();
+});
+
+if ('NodeList' in window && !NodeList.prototype.forEach) {
+    console.info('polyfill for IE11');
+    NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
+}
