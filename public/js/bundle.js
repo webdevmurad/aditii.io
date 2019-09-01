@@ -191,6 +191,56 @@ module.exports = openModal;
 
 /***/ }),
 
+/***/ "./js/parts/sliderHeader.js":
+/*!**********************************!*\
+  !*** ./js/parts/sliderHeader.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function sliderHeader() {
+  var slideIndex = 4,
+      slides = document.querySelectorAll('.presentation-block__slider'),
+      dotsWrap = document.querySelector('.presentation-block__dots'),
+      dots = document.querySelectorAll('.dot');
+  showSlides(slideIndex);
+
+  function showSlides(n) {
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    slides.forEach(function (item) {
+      return item.style.display = 'none';
+    });
+    dots.forEach(function (item) {
+      return item.classList.remove('dot-active');
+    });
+    slides[slideIndex - 1].style.display = 'flex';
+    dots[slideIndex - 1].classList.add('dot-active');
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  dotsWrap.addEventListener('click', function (event) {
+    for (var i = 0; i < dots.length + 1; i++) {
+      if (event.target.classList.contains('dot') && event.target == dots[i - 1]) {
+        currentSlide(i);
+      }
+    }
+  });
+}
+
+module.exports = sliderHeader;
+
+/***/ }),
+
 /***/ "./js/script.js":
 /*!**********************!*\
   !*** ./js/script.js ***!
@@ -203,8 +253,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
   var burger = __webpack_require__(/*! ./parts/burger.js */ "./js/parts/burger.js"),
       openModal = __webpack_require__(/*! ./parts/openModal.js */ "./js/parts/openModal.js"),
-      basket = __webpack_require__(/*! ./parts/basket.js */ "./js/parts/basket.js");
+      basket = __webpack_require__(/*! ./parts/basket.js */ "./js/parts/basket.js"),
+      sliderHeader = __webpack_require__(/*! ./parts/sliderHeader.js */ "./js/parts/sliderHeader.js");
 
+  sliderHeader();
   basket();
   openModal();
   burger();
