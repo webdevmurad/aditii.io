@@ -99,15 +99,44 @@ function burger() {
       closeBtn = document.querySelector('.burger-close');
   burgerMenu.addEventListener('click', function () {
     cart.style.display = 'flex';
+    cart.style.opacity = 1;
+    cart.style.transition = '2s linear';
     document.body.style.overflow = 'hidden';
   });
   closeBtn.addEventListener('click', function () {
     cart.style.display = 'none';
+    cart.style.opacity = 0;
+    cart.style.transition = '';
     document.body.style.overflow = '';
   });
 }
 
 module.exports = burger;
+
+/***/ }),
+
+/***/ "./js/parts/openModal.js":
+/*!*******************************!*\
+  !*** ./js/parts/openModal.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function openModal() {
+  var basketIcon = document.querySelector('.basket-img'),
+      cartBody = document.querySelector('.cart'),
+      cartClose = document.querySelector('.cart-close');
+  basketIcon.addEventListener('click', function () {
+    cartBody.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+  cartClose.addEventListener('click', function () {
+    cartBody.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+  });
+}
+
+module.exports = openModal;
 
 /***/ }),
 
@@ -121,8 +150,10 @@ module.exports = burger;
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  var burger = __webpack_require__(/*! ./parts/burger.js */ "./js/parts/burger.js");
+  var burger = __webpack_require__(/*! ./parts/burger.js */ "./js/parts/burger.js"),
+      openModal = __webpack_require__(/*! ./parts/openModal.js */ "./js/parts/openModal.js");
 
+  openModal();
   burger();
 });
 
