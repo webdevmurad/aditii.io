@@ -191,6 +191,19 @@ module.exports = openModal;
 
 /***/ }),
 
+/***/ "./js/parts/sliderClient.js":
+/*!**********************************!*\
+  !*** ./js/parts/sliderClient.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function sliderClient() {}
+
+module.exports = sliderClient;
+
+/***/ }),
+
 /***/ "./js/parts/sliderHeader.js":
 /*!**********************************!*\
   !*** ./js/parts/sliderHeader.js ***!
@@ -254,8 +267,10 @@ window.addEventListener('DOMContentLoaded', function () {
   var burger = __webpack_require__(/*! ./parts/burger.js */ "./js/parts/burger.js"),
       openModal = __webpack_require__(/*! ./parts/openModal.js */ "./js/parts/openModal.js"),
       basket = __webpack_require__(/*! ./parts/basket.js */ "./js/parts/basket.js"),
-      sliderHeader = __webpack_require__(/*! ./parts/sliderHeader.js */ "./js/parts/sliderHeader.js");
+      sliderHeader = __webpack_require__(/*! ./parts/sliderHeader.js */ "./js/parts/sliderHeader.js"),
+      sliderClient = __webpack_require__(/*! ./parts/sliderClient.js */ "./js/parts/sliderClient.js");
 
+  sliderClient();
   sliderHeader();
   basket();
   openModal();

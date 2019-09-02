@@ -1,5 +1,6 @@
 .clothes
     &-slide
+        position: relative
         &__img
             &:hover
                 cursor: pointer
@@ -59,12 +60,34 @@
     &-price
         font-weight: 900
 
+.prev
+    position: absolute
+    top: 5em
+    left: 1%
+    &-left
+        width: 29px
+        height: 88px
+        background: url('../img/clothes-slide/arrow-left.png')
+.next
+    position: absolute
+    top: 5em
+    right: 1%
+    &-right
+        width: 29px
+        height: 88px
+        background: url('../img/clothes-slide/arrow-right.png')
+
+
 @media (max-width: 990px)
     .clothes
         &-slide
             &__info
                 margin-left: 10px
 @media (max-width: 768px)
+    .prev
+        top: 11em
+    .next
+        top: 11em
     .clothes
         &-slide
             &__blocks

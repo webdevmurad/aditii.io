@@ -414,6 +414,10 @@
   }
 }
 
+.clothes-slide {
+  position: relative;
+}
+
 .clothes-slide__img:hover {
   cursor: pointer;
 }
@@ -505,6 +509,30 @@
   font-weight: 900;
 }
 
+.prev {
+  position: absolute;
+  top: 5em;
+  left: 1%;
+}
+
+.prev-left {
+  width: 29px;
+  height: 88px;
+  background: url("../img/clothes-slide/arrow-left.png");
+}
+
+.next {
+  position: absolute;
+  top: 5em;
+  right: 1%;
+}
+
+.next-right {
+  width: 29px;
+  height: 88px;
+  background: url("../img/clothes-slide/arrow-right.png");
+}
+
 @media (max-width: 990px) {
   .clothes-slide__info {
     margin-left: 10px;
@@ -512,6 +540,12 @@
 }
 
 @media (max-width: 768px) {
+  .prev {
+    top: 11em;
+  }
+  .next {
+    top: 11em;
+  }
   .clothes-slide__blocks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

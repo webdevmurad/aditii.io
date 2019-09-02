@@ -4,13 +4,15 @@ window.addEventListener('DOMContentLoaded', function() {
     let burger = require('./parts/burger.js'),
         openModal = require('./parts/openModal.js'),
         basket = require('./parts/basket.js'),
-        sliderHeader = require('./parts/sliderHeader.js');
+        sliderHeader = require('./parts/sliderHeader.js'),
+        sliderClient = require('./parts/sliderClient.js');
 
-
+    sliderClient();
     sliderHeader();
     basket();
     openModal();
     burger();
+    
 });
 
 if ('NodeList' in window && !NodeList.prototype.forEach) {
