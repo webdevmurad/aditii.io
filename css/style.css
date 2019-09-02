@@ -515,10 +515,15 @@
   left: 1%;
 }
 
+.prev:hover {
+  cursor: pointer;
+  background-color: #EDE6E6;
+}
+
 .prev-left {
-  width: 29px;
-  height: 88px;
-  background: url("../img/clothes-slide/arrow-left.png");
+  width: 64px;
+  height: 64px;
+  background: url("../img/clothes-slide/left.png");
 }
 
 .next {
@@ -527,10 +532,15 @@
   right: 1%;
 }
 
+.next:hover {
+  cursor: pointer;
+  background-color: #CDC7C7;
+}
+
 .next-right {
-  width: 29px;
-  height: 88px;
-  background: url("../img/clothes-slide/arrow-right.png");
+  width: 64px;
+  height: 64px;
+  background: url("../img/clothes-slide/right.png");
 }
 
 @media (max-width: 990px) {
