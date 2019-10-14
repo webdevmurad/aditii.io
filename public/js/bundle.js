@@ -145,7 +145,7 @@ module.exports = basket;
 /***/ (function(module, exports) {
 
 function burger() {
-  var burgerMenu = document.getElementById('burger'),
+  var burgerMenu = document.querySelector('.menu-link'),
       cart = document.querySelector('.burger'),
       closeBtn = document.querySelector('.burger-close');
   burgerMenu.addEventListener('click', function () {
