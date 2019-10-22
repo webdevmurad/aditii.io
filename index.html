@@ -7,6 +7,7 @@
     <title>Aditii</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +15,7 @@
     <header>
 
         <div class="container">
-            <div class="header-block">
+            <div class="header-block animated flipInX">
                 <div class="header-logo">
                     <img src="./img/header/logo_header.png" alt="#">
                 </div>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="nav-wrapper">
-            <nav class="nav-list">
+            <nav class="nav-list animated flipInX">
                 <div class="nav-links">
                     <a href="#" class="nav-link">Home</a>
                     <a href="#" class="nav-link">Sale</a>
@@ -60,7 +61,7 @@
         <div class="presentation">
             <div class="container">
                 <div class="presentation-block">
-                    <div class="presentation-block__slider">
+                    <div class="presentation-block__slider animated bounceIn">
                         <div class="presentation-block__img">
                             <img src="./img/presentation/T-shirt2.png" alt="#">
                         </div>
@@ -77,7 +78,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="presentation-block__slider">
+                    <div class="presentation-block__slider animated bounceIn">
                         <div class="presentation-block__img">
                             <img src="./img/presentation/T-shirt3.png" alt="#">
                         </div>
@@ -94,7 +95,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="presentation-block__slider">
+                    <div class="presentation-block__slider animated bounceIn">
                         <div class="presentation-block__img">
                             <img src="./img/presentation/sport.png" alt="#">
                         </div>
@@ -111,7 +112,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="presentation-block__slider">
+                    <div class="presentation-block__slider animated bounceIn">
                         <div class="presentation-block__img">
                             <img src="./img/presentation/T-shirt.png" alt="#">
                         </div>
@@ -128,7 +129,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="presentation-block__slider">
+                    <div class="presentation-block__slider animated bounceIn">
                         <div class="presentation-block__img">
                             <img src="./img/presentation/football.png" alt="#">
                         </div>
@@ -158,7 +159,7 @@
 
         <div class="clothes-slide">
             <div class="container clothes">
-                <div class="clothes-slide__blocks">
+                <div class="clothes-slide__blocks animated zoomIn">
                     <div class="clothes-slide__block">
                         <img src="./img/clothes-slide/shoes.jpg" alt="#" class="clothes-slide__img">
                         <div class="clothes-slide__info">
@@ -193,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clothes-slide__blocks">
+                <div class="clothes-slide__blocks animated zoomIn">
                     <div class="clothes-slide__block">
                         <img src="./img/clothes-slide/pants.jpg" alt="#" class="clothes-slide__img">
                         <div class="clothes-slide__info">
@@ -247,7 +248,7 @@
 
         <div class="product">  
             <div class="container">
-                <div class="product-blocks">
+                <div class="product-blocks wow fadeIn">
                     <div class="product-block card">
                         <img src="./img/product/shoes-woman.jpg" alt="#" class="product-block__img">
                         <div class="product-block__title">Branded shoe</div>
@@ -277,7 +278,7 @@
                     </div>
                 </div>
 
-                <div class="product-blocks">
+                <div class="product-blocks wow fadeIn">
                     <div class="product-block card">
                         <img src="./img/product/Tshirt2.jpg" alt="#" class="product-block__img">
                         <div class="product-block__title">Branded Tshirt</div>
@@ -417,5 +418,9 @@
     </div>
 
     <script src="./public/js/bundle.js"></script>
+    <script src="./wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
